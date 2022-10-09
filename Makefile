@@ -8,17 +8,26 @@
 setup:
 	# Create python virtualenv & source it
 	# source ~/.devops/bin/activate
-	python3 -m venv ~/.devops
+	python3 -m venv ~/.housing-price-ml-predictor
+	#source ~/.housing-price-ml-predictor/bin/activate
+
+env:
+	# Show information about environment
+	which python
+	python --version
+	which pytest
+	which pylint
 
 install:
 	# This should be run from inside a virtualenv
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+		pip install -U -r requirements.txt
 
 test:
 	# Additional, optional, tests could go here
 	#python -m pytest -vv --cov=myrepolib tests/*.py
 	#python -m pytest --nbval notebook.ipynb
+	#@cd tests; pytest -vv --cov-report term-missing --cov=web --cov=nlib test_*.py
 
 lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
