@@ -15,7 +15,7 @@ kubectl run house-price-predictor\
 
 # Step 3:
 # List kubernetes pods
-sleep 5
+sleep 10
 kubectl get pods
 
 # Step 4:
